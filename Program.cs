@@ -32,7 +32,7 @@ namespace csharpcore
                     Quality = 49
                 },
 				// this conjured item does not work properly yet
-				new QualityItem {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
+				new ConjuredItem {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
             };
 
             var app = new GildedRose(Items);
