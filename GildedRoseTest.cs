@@ -120,7 +120,7 @@ namespace csharpcore
         [Fact]
         public void conjuredItemsQualityDecreaseFaster()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Conjured Mana Cake", SellIn = 10, Quality = 20 } };
+            IList<QualityItem> Items = new List<QualityItem> { new ConjuredItem { Name = "Conjured Mana Cake", SellIn = 10, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
