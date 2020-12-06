@@ -11,7 +11,11 @@ namespace csharpcore
         public override void UpdateQuality()
         {
             SellIn--;
-            increaseQuality();
+
+            if (SellIn >= 0)
+                increaseQuality();
+            else
+                increaseQuality(2);
         }
     }
 }

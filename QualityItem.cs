@@ -68,12 +68,9 @@ namespace csharpcore
             }
         }
 
-        public void increaseQuality()
+        public void increaseQuality(int amount=1)
         {
-            if (SellIn >= 0)
-                Quality++;
-            else
-                Quality += 2;
+            Quality += amount;
 
             if (Quality > 50)
                 Quality = 50;
