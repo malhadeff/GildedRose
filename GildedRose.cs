@@ -8,7 +8,7 @@ namespace csharpcore
 
         public GildedRose()
         {
-            this.Items = new List<QualityItem>();
+            Items = new List<QualityItem>();
         }
 
         public GildedRose(IList<QualityItem> Items)
@@ -18,7 +18,7 @@ namespace csharpcore
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            for (int i = 0; i < Items.Count; i++)
             {
                 Items[i].UpdateSellIn();
                 Items[i].UpdateQuality();

@@ -13,12 +13,12 @@ namespace csharpcore
         [Fact]
         public void ThirtyDays()
         {
-            var fakeoutput = new StringBuilder();
+            StringBuilder fakeoutput = new StringBuilder();
             Console.SetOut(new StringWriter(fakeoutput));
             Console.SetIn(new StringReader("a\n"));
 
-            Program.Main(new string[] { });
-            var output = fakeoutput.ToString();
+            Program.Main();
+            string output = fakeoutput.ToString();
 
             Approvals.Verify(output);
         }

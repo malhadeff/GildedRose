@@ -1,5 +1,4 @@
-﻿using System;
-namespace csharpcore
+﻿namespace csharpcore
 {
     public class AgingItem : QualityItem
     {
@@ -11,9 +10,13 @@ namespace csharpcore
         public override void UpdateQuality()
         {
             if (SellIn >= 0)
-                increaseQuality();
+            {
+                IncreaseQuality();
+            }
             else
-                increaseQuality(2);
+            {
+                IncreaseQuality(2);
+            }
         }
     }
 }

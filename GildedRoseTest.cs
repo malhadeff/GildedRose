@@ -6,7 +6,7 @@ namespace csharpcore
     public class GildedRoseTest
     {
         [Fact]
-        public void endOfDay()
+        public void EndOfDay()
         {
             IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "foo", SellIn = 10, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
@@ -18,7 +18,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void passedArticlesQualityDecreaseFaster()
+        public void PassedArticlesQualityDecreaseFaster()
         {
             IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "foo", SellIn = 0, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
@@ -29,7 +29,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void qualityMustAlwaysBePositive()
+        public void QualityMustAlwaysBePositive()
         {
             IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "foo", SellIn = 0, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
@@ -40,7 +40,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void agedBrieQualityMustIncrease()
+        public void AgedBrieQualityMustIncrease()
         {
             IList<QualityItem> Items = new List<QualityItem> { new AgingItem { Name = "Aged Brie", SellIn = 10, Quality = 10 } };
             GildedRose app = new GildedRose(Items);
@@ -51,7 +51,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void qualityMustBeLowerThanOrEqualToFifty()
+        public void QualityMustBeLowerThanOrEqualToFifty()
         {
             IList<QualityItem> Items = new List<QualityItem> { new AgingItem { Name = "Aged Brie", SellIn = 0, Quality = 50 } };
             GildedRose app = new GildedRose(Items);
@@ -62,7 +62,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void legendaryProductsNeverChange()
+        public void LegendaryProductsNeverChange()
         {
             IList<QualityItem> Items = new List<QualityItem> { new LegendaryItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 5, Quality = 25 } };
             GildedRose app = new GildedRose(Items);
@@ -74,7 +74,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void backstagePassesQualityMustIncrease()
+        public void BackstagePassesQualityMustIncrease()
         {
             IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 20, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
@@ -85,7 +85,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void backstagePassesQualityMustIncreaseFaster()
+        public void BackstagePassesQualityMustIncreaseFaster()
         {
             IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
@@ -96,7 +96,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void backstagePassesQualityMustIncreaseEvenFaster()
+        public void BackstagePassesQualityMustIncreaseEvenFaster()
         {
             IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
@@ -107,7 +107,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void passedBackstagePassesQualityMustBeZero()
+        public void PassedBackstagePassesQualityMustBeZero()
         {
             IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
@@ -118,7 +118,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void conjuredItemsQualityDecreaseFaster()
+        public void ConjuredItemsQualityDecreaseFaster()
         {
             IList<QualityItem> Items = new List<QualityItem> { new ConjuredItem { Name = "Conjured Mana Cake", SellIn = 10, Quality = 20 } };
             GildedRose app = new GildedRose(Items);

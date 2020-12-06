@@ -1,5 +1,4 @@
-﻿using System;
-namespace csharpcore
+﻿namespace csharpcore
 {
     public class QualityItem : Item
     {
@@ -16,9 +15,13 @@ namespace csharpcore
         public virtual void UpdateQuality()
         {
             if (SellIn >= 0)
+            {
                 DecreaseQuality();
+            }
             else
+            {
                 DecreaseQuality(2);
+            }
         }
 
         public void IncreaseQuality(int amount = 1)
@@ -26,7 +29,9 @@ namespace csharpcore
             Quality += amount;
 
             if (Quality > 50)
+            {
                 Quality = 50;
+            }
         }
 
         public void DecreaseQuality(int amount = 1)
@@ -34,7 +39,9 @@ namespace csharpcore
             Quality-=amount;
 
             if (Quality < 0)
+            {
                 Quality = 0;
+            }
         }
 
         public override string ToString()

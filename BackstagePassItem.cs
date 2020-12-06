@@ -1,5 +1,4 @@
-﻿using System;
-namespace csharpcore
+﻿namespace csharpcore
 {
     public class BackstagePassItem : QualityItem
     {
@@ -11,13 +10,21 @@ namespace csharpcore
         public override void UpdateQuality()
         {
             if (SellIn >= 10)
-                increaseQuality();
+            {
+                IncreaseQuality();
+            }
             else if (SellIn >= 5)
-                increaseQuality(2);
+            {
+                IncreaseQuality(2);
+            }
             else if (SellIn >= 0)
-                increaseQuality(3);
+            {
+                IncreaseQuality(3);
+            }
             else
+            {
                 Quality = 0;
+            }
         }
     }
 }

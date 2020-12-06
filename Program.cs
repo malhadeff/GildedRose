@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace csharpcore
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
-            var app = new GildedRose();
+            GildedRose app = new GildedRose();
             app.AddItem(new QualityItem { Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20 });
             app.AddItem(new AgingItem { Name = "Aged Brie", SellIn = 2, Quality = 0 });
             app.AddItem(new QualityItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7 });
@@ -33,11 +32,11 @@ namespace csharpcore
             });
             app.AddItem(new ConjuredItem { Name = "Conjured Mana Cake", SellIn = 3, Quality = 6 });
 
-            for (var i = 0; i < 31; i++)
+            for (int i = 0; i < 31; i++)
             {
                 Console.WriteLine("-------- day " + i + " --------");
                 Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < app.Items.Count; j++)
+                for (int j = 0; j < app.Items.Count; j++)
                 {
                     Console.WriteLine(app.Items[j]);
                 }

@@ -1,5 +1,4 @@
-﻿using System;
-namespace csharpcore
+﻿namespace csharpcore
 {
     public class LegendaryItem : QualityItem
     {
