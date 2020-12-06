@@ -33,5 +33,10 @@ namespace csharpcore
             if (Quality < 0)
                 Quality = 0;
         }
+
+        public override string ToString()
+        {
+            return $"{Name}, {SellIn}, {Quality}";
+        }
     }
 }

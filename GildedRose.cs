@@ -4,7 +4,13 @@ namespace csharpcore
 {
     public class GildedRose
     {
-        IList<QualityItem> Items;
+        public IList<QualityItem> Items { get; private set; }
+
+        public GildedRose()
+        {
+            this.Items = new List<QualityItem>();
+        }
+
         public GildedRose(IList<QualityItem> Items)
         {
             this.Items = Items;
@@ -16,6 +22,11 @@ namespace csharpcore
             {
                 Items[i].UpdateQuality();
             }
+        }
+
+        public void AddItem(QualityItem item)
+        {
+            Items.Add(item);
         }
     }
 }
