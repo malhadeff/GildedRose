@@ -20,6 +20,7 @@ namespace csharpcore
         {
             for (var i = 0; i < Items.Count; i++)
             {
+                Items[i].UpdateSellIn();
                 Items[i].UpdateQuality();
             }
         }

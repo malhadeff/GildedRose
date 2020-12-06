@@ -8,10 +8,13 @@ namespace csharpcore
         {
         }
 
-        public virtual void UpdateQuality()
+        public virtual void UpdateSellIn()
         {
             SellIn--;
+        }
 
+        public virtual void UpdateQuality()
+        {
             if (SellIn >= 0)
                 decreaseQuality();
             else

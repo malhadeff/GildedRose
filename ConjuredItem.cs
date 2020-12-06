@@ -10,7 +10,6 @@ namespace csharpcore
 
         public override void UpdateQuality()
         {
-            SellIn--;
             Quality -= 2;
         }
     }
