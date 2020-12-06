@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace csharpcore
 {
@@ -11,9 +12,9 @@ namespace csharpcore
             Items = new List<QualityItem>();
         }
 
-        public GildedRose(IList<QualityItem> Items)
+        public GildedRose(IList<QualityItem> items)
         {
-            this.Items = Items;
+            Items = items ?? throw new ArgumentNullException("items");
         }
 
         public void UpdateQuality()
@@ -27,7 +28,10 @@ namespace csharpcore
 
         public void AddItem(QualityItem item)
         {
-            Items.Add(item);
+            if (item == null)
+                throw new ArgumentNullException("item");
+            else
+                Items.Add(item);
         }
     }
 }
