@@ -64,7 +64,7 @@ namespace csharpcore
         [Fact]
         public void legendaryProductsNeverChange()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 5, Quality = 25 } };
+            IList<QualityItem> Items = new List<QualityItem> { new LegendaryItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 5, Quality = 25 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();

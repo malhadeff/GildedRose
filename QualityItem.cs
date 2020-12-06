@@ -10,7 +10,7 @@ namespace csharpcore
 
         public virtual void UpdateQuality()
         {
-            if (Name != "Aged Brie" && Name != "Backstage passes to a TAFKAL80ETC concert")
+            if (Name != "Backstage passes to a TAFKAL80ETC concert")
             {
                 if (Quality > 0)
                 {
@@ -47,51 +47,41 @@ namespace csharpcore
                 }
             }
 
-            if (Name != "Sulfuras, Hand of Ragnaros")
-            {
-                SellIn = SellIn - 1;
-            }
-
+            SellIn = SellIn - 1;
+            
             if (SellIn < 0)
             {
-                if (Name != "Aged Brie")
+                if (Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    if (Name != "Backstage passes to a TAFKAL80ETC concert")
+                    if (Quality > 0)
                     {
-                        if (Quality > 0)
+                        if (Name != "Sulfuras, Hand of Ragnaros")
                         {
-                            if (Name != "Sulfuras, Hand of Ragnaros")
-                            {
-                                decreaseQuality();
-                            }
+                            decreaseQuality();
                         }
-                    }
-                    else
-                    {
-                        decreaseQuality(Quality);
                     }
                 }
                 else
                 {
-                    if (Quality < 50)
-                    {
-                        increaseQuality();
-                    }
+                    Quality = 0;
                 }
             }
         }
 
-        public void increaseQuality(int amount=1)
+        public void increaseQuality()
         {
-            Quality += amount;
+            if (SellIn >= 0)
+                Quality++;
+            else
+                Quality += 2;
 
             if (Quality > 50)
                 Quality = 50;
         }
 
-        public void decreaseQuality(int amount=1)
+        public void decreaseQuality()
         {
-            Quality -= amount;
+            Quality --;
 
             if (Quality < 0)
                 Quality = 0;

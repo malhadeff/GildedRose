@@ -9,10 +9,10 @@ namespace csharpcore
         {
             IList<QualityItem> Items = new List<QualityItem>{
                 new QualityItem {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
-                new QualityItem {Name = "Aged Brie", SellIn = 2, Quality = 0},
+                new AgingItem {Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new QualityItem {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
-                new QualityItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
-                new QualityItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
+                new LegendaryItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
+                new LegendaryItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
                 new QualityItem
                 {
                     Name = "Backstage passes to a TAFKAL80ETC concert",
