@@ -29,7 +29,7 @@ namespace csharpcore
         }
 
         [Fact]
-        public void qualtiyMustAlwaysBePositive()
+        public void qualityMustAlwaysBePositive()
         {
             IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "foo", SellIn = 0, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
@@ -42,7 +42,7 @@ namespace csharpcore
         [Fact]
         public void agedBrieQualityMustIncrease()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Aged Brie", SellIn = 10, Quality = 10 } };
+            IList<QualityItem> Items = new List<QualityItem> { new AgingItem { Name = "Aged Brie", SellIn = 10, Quality = 10 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -53,7 +53,7 @@ namespace csharpcore
         [Fact]
         public void qualityMustBeLowerThanOrEqualToFifty()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Aged Brie", SellIn = 0, Quality = 50 } };
+            IList<QualityItem> Items = new List<QualityItem> { new AgingItem { Name = "Aged Brie", SellIn = 0, Quality = 50 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();

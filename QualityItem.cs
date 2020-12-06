@@ -16,7 +16,7 @@ namespace csharpcore
                 {
                     if (Name != "Sulfuras, Hand of Ragnaros")
                     {
-                        Quality = Quality - 1;
+                        decreaseQuality();
                     }
                 }
             }
@@ -24,7 +24,7 @@ namespace csharpcore
             {
                 if (Quality < 50)
                 {
-                    Quality = Quality + 1;
+                    increaseQuality();
 
                     if (Name == "Backstage passes to a TAFKAL80ETC concert")
                     {
@@ -32,7 +32,7 @@ namespace csharpcore
                         {
                             if (Quality < 50)
                             {
-                                Quality = Quality + 1;
+                                increaseQuality();
                             }
                         }
 
@@ -40,7 +40,7 @@ namespace csharpcore
                         {
                             if (Quality < 50)
                             {
-                                Quality = Quality + 1;
+                                increaseQuality();
                             }
                         }
                     }
@@ -62,23 +62,39 @@ namespace csharpcore
                         {
                             if (Name != "Sulfuras, Hand of Ragnaros")
                             {
-                                Quality = Quality - 1;
+                                decreaseQuality();
                             }
                         }
                     }
                     else
                     {
-                        Quality = Quality - Quality;
+                        decreaseQuality(Quality);
                     }
                 }
                 else
                 {
                     if (Quality < 50)
                     {
-                        Quality = Quality + 1;
+                        increaseQuality();
                     }
                 }
             }
+        }
+
+        public void increaseQuality(int amount=1)
+        {
+            Quality += amount;
+
+            if (Quality > 50)
+                Quality = 50;
+        }
+
+        public void decreaseQuality(int amount=1)
+        {
+            Quality -= amount;
+
+            if (Quality < 0)
+                Quality = 0;
         }
     }
 }
