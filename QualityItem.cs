@@ -16,12 +16,12 @@ namespace csharpcore
         public virtual void UpdateQuality()
         {
             if (SellIn >= 0)
-                decreaseQuality();
+                DecreaseQuality();
             else
-                decreaseQuality(2);
+                DecreaseQuality(2);
         }
 
-        public void increaseQuality(int amount=1)
+        public void IncreaseQuality(int amount = 1)
         {
             Quality += amount;
 
@@ -29,7 +29,7 @@ namespace csharpcore
                 Quality = 50;
         }
 
-        public void decreaseQuality(int amount=1)
+        public void DecreaseQuality(int amount = 1)
         {
             Quality-=amount;
 
