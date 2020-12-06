@@ -10,62 +10,12 @@ namespace csharpcore
 
         public virtual void UpdateQuality()
         {
-            if (Name != "Backstage passes to a TAFKAL80ETC concert")
-            {
-                if (Quality > 0)
-                {
-                    if (Name != "Sulfuras, Hand of Ragnaros")
-                    {
-                        decreaseQuality();
-                    }
-                }
-            }
+            SellIn--;
+
+            if (SellIn >= 0)
+                decreaseQuality();
             else
-            {
-                if (Quality < 50)
-                {
-                    increaseQuality();
-
-                    if (Name == "Backstage passes to a TAFKAL80ETC concert")
-                    {
-                        if (SellIn < 11)
-                        {
-                            if (Quality < 50)
-                            {
-                                increaseQuality();
-                            }
-                        }
-
-                        if (SellIn < 6)
-                        {
-                            if (Quality < 50)
-                            {
-                                increaseQuality();
-                            }
-                        }
-                    }
-                }
-            }
-
-            SellIn = SellIn - 1;
-            
-            if (SellIn < 0)
-            {
-                if (Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    if (Quality > 0)
-                    {
-                        if (Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            decreaseQuality();
-                        }
-                    }
-                }
-                else
-                {
-                    Quality = 0;
-                }
-            }
+                decreaseQuality(2);
         }
 
         public void increaseQuality(int amount=1)
@@ -76,9 +26,9 @@ namespace csharpcore
                 Quality = 50;
         }
 
-        public void decreaseQuality()
+        public void decreaseQuality(int amount=1)
         {
-            Quality --;
+            Quality-=amount;
 
             if (Quality < 0)
                 Quality = 0;

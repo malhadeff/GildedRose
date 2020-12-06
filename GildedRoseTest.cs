@@ -76,7 +76,7 @@ namespace csharpcore
         [Fact]
         public void backstagePassesQualityMustIncrease()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 20, Quality = 0 } };
+            IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 20, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -87,7 +87,7 @@ namespace csharpcore
         [Fact]
         public void backstagePassesQualityMustIncreaseFaster()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 0 } };
+            IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 10, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -98,7 +98,7 @@ namespace csharpcore
         [Fact]
         public void backstagePassesQualityMustIncreaseEvenFaster()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 0 } };
+            IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 4, Quality = 0 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
@@ -109,7 +109,7 @@ namespace csharpcore
         [Fact]
         public void passedBackstagePassesQualityMustBeZero()
         {
-            IList<QualityItem> Items = new List<QualityItem> { new QualityItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 20 } };
+            IList<QualityItem> Items = new List<QualityItem> { new BackstagePassItem { Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 0, Quality = 20 } };
             GildedRose app = new GildedRose(Items);
 
             app.UpdateQuality();
